@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/system_accent1_600"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinner_categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_conversion_category_title"
+        app:layout_constraintStart_toStartOf="@+id/textView_conversion_category_title"
+        app:layout_constraintTop_toBottomOf="@+id/textView_conversion_category_title" />
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Unit Conversation App"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_conversion_category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Select a Conversion Category"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView_title"
+        app:layout_constraintStart_toStartOf="@+id/textView_title"
+        app:layout_constraintTop_toBottomOf="@+id/textView_title" />
+
+
+    <Spinner
+        android:id="@+id/spinner_source_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumberDecimal_source_unit"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumberDecimal_source_unit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal_source_unit" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal_source_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_categories" />
+
+    <TextView
+        android:id="@+id/textView_source_unit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert From"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_source_unit"
+        app:layout_constraintStart_toStartOf="@+id/spinner_source_unit" />
+
+    <Spinner
+        android:id="@+id/spinner_destination_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_source_unit"
+        app:layout_constraintStart_toStartOf="@+id/spinner_source_unit"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_source_unit" />
+
+    <TextView
+        android:id="@+id/textView_destination_unit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert To"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_destination_unit"
+        app:layout_constraintStart_toStartOf="@+id/spinner_destination_unit" />
+
+    <Button
+        android:id="@+id/button_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_destination_unit" />
+
+    <TextView
+        android:id="@+id/textView_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="Answer goes here"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_destination_unit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinner_destination_unit"
+        app:layout_constraintTop_toTopOf="@+id/spinner_destination_unit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
